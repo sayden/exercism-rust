@@ -4,5 +4,5 @@ pub fn hamming_distance<'a>(a: &str, b: &str) -> Result<usize, &'a str> {
         return Result::Err(err);
     }
 
-    return Result::Ok(a.chars().zip(b.chars()).filter(|&(a, b)| a != b).count());
+    Result::Ok(a.chars().zip(b.chars()).filter(|&(a, b)| a != b).count())
 }

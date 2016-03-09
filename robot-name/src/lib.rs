@@ -7,7 +7,7 @@ pub struct Robot {
 use rand::{thread_rng, Rng};
 
 pub fn generate_number() -> String {
-    return thread_rng().gen_range::<u32>(100, 999).to_string();
+    thread_rng().gen_range::<u32>(100, 999).to_string()
 }
 
 pub fn generate_chars() -> String {
@@ -18,23 +18,23 @@ pub fn generate_chars() -> String {
         res.push_str(thread_rng().choose(&choices).unwrap().to_string().as_str());
     }
 
-    return res.to_uppercase();
+    res.to_uppercase()
 }
 
 pub fn generate_name() -> String {
     let mut name = generate_chars();
     name.push_str(generate_number().as_str());
-    return name;
+    name
 }
 
 
 impl Robot {
     pub fn new() -> Robot {
-        return Robot { name: generate_name() };
+        Robot { name: generate_name() }
     }
 
     pub fn name<'a>(&'a self) -> &'a str {
-        return self.name.as_str();
+        self.name.as_str()
     }
 
     pub fn reset_name(&mut self) {
