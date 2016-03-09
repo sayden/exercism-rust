@@ -13,3 +13,4 @@ Already done
 * RNA Transcription
 * Nucleotide count
 * Nucleotide codons
+* Robot name
