@@ -31,20 +31,20 @@ pub struct Allergies(pub usize);
 impl Allergies {
     pub fn is_allergic_to(&self, a: &Allergen) -> bool {
         let allergens = Allergies::get_allergens();
-        let level = a.get_level();
-        return self.0 >= level;
-        // let mut pos = 0;
-        // for i in allergens {
-        //     if a == &i {
-        //         break;
-        //     } else {
-        //         pos += 1;
-        //     }
-        // }
-        // match self.0 & 1 << pos {
-        //     0 => false,
-        //     _ => true,
-        // }
+
+        let mut pos = 0;
+        for i in allergens {
+            if a == &i {
+                break;
+            } else {
+                pos += 1;
+            }
+        }
+
+        match self.0 & 1 << pos {
+            0 => false,
+            _ => true,
+        }
     }
 
     pub fn allergies(&self) -> Vec<Allergen> {
