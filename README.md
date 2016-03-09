@@ -7,3 +7,9 @@ Already done
 * leap
 * anagram
 * difference-of-squares
+* Allergies
+* Word count
+* Hamming
+* RNA Transcription
+* Nucleotide count
+* Nucleotide codons
