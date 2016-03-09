@@ -16,3 +16,6 @@ Already done
 * Robot name
 * ETL
 * Grade school
+* Phone number
+* Hexadecimal
+* Beer song
